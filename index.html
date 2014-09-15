@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>神奇炉业单据录入</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/matrix-style.css" rel="stylesheet">
+
+    <style>
+
+        body {
+            font-family: 'microsoft yahei';
+        }
+
+        .shenqiyihao-typein-sec {
+
+            padding-top: 50px;
+
+            color: #cdbfe3;
+            text-align: center;
+
+            background-color: #6f5499;
+            background-image: -webkit-linear-gradient(top,#563d7c 0,#6f5499 100%);
+            background-image: linear-gradient(to bottom,#563d7c 0,#6f5499 100%);
+            background-repeat: repeat-x;
+        }
+
+        .bs-docs-booticon {
+            margin: 0 auto 30px;
+        }
+
+        .bs-docs-booticon-outline {
+            background-color: transparent;
+            border: 1px solid #cdbfe3;
+        }
+
+        .bs-docs-booticon-lg {
+            width: 400px;
+            height: 144px;
+            font-size: 108px;
+            line-height: 140px;
+        }
+
+        .bs-docs-booticon {
+            display: block;
+            font-weight: 500;
+            color: #fff;
+            background-color: #563d7c;
+            border-radius: 15%;
+            cursor: default;
+            text-align: center;
+        }
+
+        .data-table {
+            background-color: #f9f9f9;
+        }
+    </style>
+
+</head>
+<body>
+<header class="container text-center">
+    <h1>
+        神奇一号采暖炉录入单
+        <small>蠡县古灵山<abbr title="神奇炉业创办于2008年，具有强大的技术实力，立志于为华夏大地送上温暖。">神奇炉业</abbr></small>
+        <a class="btn btn-info pull-right" href="print.html">前往打印单据</a>
+    </h1>
+</header>
+<article>
+    <div class="container-fluid shenqiyihao-typein-sec">
+
+        <div class="container">
+            <span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">SQLY</span>
+
+            <p class="lead">神奇炉业创办于2008年，具有强大的技术实力，立志于为华夏大地送上温暖。</p>
+
+            <p class="lead">表格中是已经录入的神奇一号的型号单，点击表头可以排序。</p>
+
+            <table class="table table-bordered table-striped table-hover data-table">
+                <thead>
+                    <tr>
+                        <th>品类</th>
+                        <th>型号</th>
+                        <th>单价(￥)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <div class="container">
+
+            <p class="lead text-left">如果有需要新添加的型号，产品，单价，点击新增按钮添加</p>
+            <button class="btn btn-info btn-block" data-add-new-category="true">新增</button>
+
+        </div>
+
+
+        <div class="row" id="footer">
+            <p class="text-center">
+                <a class="btn btn-info" href="print.html">前往打印单据</a>
+            </p>
+        </div>
+    </div>
+
+</article>
+
+<div class="modal fade" id="modal-add-new-category">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">新增品类</h4>
+            </div>
+            <div class="modal-body">
+                <form class="text-left" role="form">
+                    <div class="form-group">
+                        <label for="category-form-control">品类</label>
+                        <input class="form-control" id="category-form-control" type="text" placeholder="神奇(不填默认神奇系列)"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="model-form-control">型号</label>
+                        <input class="form-control" id="model-form-control" type="text" placeholder="型号为必填项"/>
+                    </div>
+                    <div class="form-group has-success has-feedback">
+                        <label for="price-form-control">单价</label>
+                        <input class="form-control" id="price-form-control" type="text" placeholder="单价为必填项，以元为单位"/>
+                        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                    </div>
+                    <button class="btn btn-success btn-block" type="submit" data-save="true">提交</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="container text-center">
+    <blockquote>
+        <p>Copyright ©2008 - 2014 神奇炉业</p>
+        <footer>董事长：刘凯微，总经理：刘凯亮</footer>
+    </blockquote>
+</footer>
+
+<script type="text/javascript"
+        src="http://pub.idqqimg.com/qqfind/js/jquery-2.0.0.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/parse-1.2.7.min.js"></script>
+
+<script type="text/javascript" src="//cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
